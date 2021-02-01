@@ -45,3 +45,14 @@ Unit Test Fundamentals
         4. If passing tests - deploys to manual testing environment
     Continuous Integration
         https://www.martingfowler.com/articles/continuousIntegration.html
+Unit Testing with pytest
+    unittest is based on JUnit
+    pytest
+        Popular alternative to unittest
+        It is not a member of the xUnit family
+        It is not in the standard Python distribution
+        doc.pytest.org
+    How to run
+        $ python3 -m pytest
+    Get fixtures
+        $ pytest --fixtures
