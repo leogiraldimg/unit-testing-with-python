@@ -56,3 +56,11 @@ Unit Testing with pytest
         $ python3 -m pytest
     Get fixtures
         $ pytest --fixtures
+    Skip slow tests
+        $ python -m pytest -m "not slow"
+    Get list of markers
+        $ python -m pytest --markers
+    Plugins
+        pytest-html
+            https://pypi.org/project/pytest-html
+            $ python -m pytest --html=report.html
