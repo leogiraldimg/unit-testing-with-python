@@ -3,3 +3,45 @@ Unit Test Fundamentals
         the filesystem
         a Database
         the Network
+    The three parts of a test
+        Arrange
+            Set up the object to be tested and collaborators
+        Act
+            Exercise the unit under test
+        Assert
+            Make claims about what happened
+    unittest - docs: https://docs.python.org/3/library/unittest.html
+    Regression = Something that used to work and no longer does
+    Limitations of unit test
+        Hard to write if units have many dependencies
+        Test scenarios may not occur in production
+        Tests may not notice failures
+        Unit tests do not find integrations or non-functional problems
+    Test-Last process
+        Tests come after code
+            Write Code -> Write Tests
+        Test when design is stable
+        Risks of untestable design
+        Discover bugs later
+        Tests are rushed
+    Test-First process
+        Design sketch -> Write all tests -> Write all code
+        Design is testable
+        Hard to predict all cases
+        You will end up iterating
+    Test-Driven development
+        Write onde test -> Make it pass -> Refactor (REPEAT)
+        Unfamiliar way of working
+        Takes discipline
+        Refactoring takes skill
+    Tests Support Collaboration
+        1. Pull changes from version control
+        2. Run the tests and check they pass before changing code
+        3. Run the tests again before sharing your changes
+    Build automation server
+        1. Detects changes from version control, fetches them
+        2. Build the code & runs the tests
+        3. Communicates the result to developers
+        4. If passing tests - deploys to manual testing environment
+    Continuous Integration
+        https://www.martingfowler.com/articles/continuousIntegration.html
