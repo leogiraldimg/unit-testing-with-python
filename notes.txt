@@ -64,3 +64,21 @@ Unit Testing with pytest
         pytest-html
             https://pypi.org/project/pytest-html
             $ python -m pytest --html=report.html
+Testable Documentation with doctest
+    Use Cases for doctest
+        'docstring' maintenance
+            Keep it synchronised with the code
+        Regression Testing
+            Similar to unittest or pytest
+        Tutorial documentation
+            For when you publish a python library
+    Docstrings are comments in the code that document how to use a module, class or function
+        doctest helps you keep them up to date
+        https://docs.python.org/3/library/doctest.html
+    Run the doctest
+        $ python -m doctest yatzy.py -v
+        $ python -m pytest --doctest-modules
+    Run the doctest ignoring exception details
+        $ python -m pytest --doctest-modules -o doctest_optionflags=IGNORE_EXCEPTION_DETAIL
+    Run regression test in tutorial documentation
+        $  python -m pytest --doctest-modules --doctest-glob='*.rst'
