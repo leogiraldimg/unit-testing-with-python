@@ -82,3 +82,36 @@ Testable Documentation with doctest
         $ python -m pytest --doctest-modules -o doctest_optionflags=IGNORE_EXCEPTION_DETAIL
     Run regression test in tutorial documentation
         $  python -m pytest --doctest-modules --doctest-glob='*.rst'
+Using Test Doubles
+    Kinds of test Doubles
+        Stub
+            Looks good from the outside
+            Contains nothing except what you put there
+            Will not fail the test
+        Spy
+            Can fail the test if it's not called correctly
+            Looks good from the outside
+            Records the method calls it receives
+        Mock
+            Can fail the test if it's not called correctly
+        Fake object
+            Looks good from the outside
+            Has an implementation with logic and behaviour
+            Common things to replace with a Fake
+                File
+                    Replace with StringIO
+                Database
+                    Replace with in-memory database
+                WebServer
+                    Replace with lightweight WebServer
+        Dummy
+            Pass a default value to specific param
+            It doesn't matter what it looks like
+            A dummy is not used
+            Usually None
+    Three kinds of asserts
+        Return value or an exception
+        State change
+            Use an API to query the new state
+        Method call
+            Did a specific method get called on a collaborator
