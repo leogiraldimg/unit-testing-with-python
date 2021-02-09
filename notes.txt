@@ -94,6 +94,8 @@ Using Test Doubles
             Records the method calls it receives
         Mock
             Can fail the test if it's not called correctly
+            Looks good from the outside
+            Expect certain method calls, otherwise raise an error
         Fake object
             Looks good from the outside
             Has an implementation with logic and behaviour
@@ -115,3 +117,32 @@ Using Test Doubles
             Use an API to query the new state
         Method call
             Did a specific method get called on a collaborator
+    Test Doubles from two groups
+        Replace inconvenient collaborators
+            Dummy
+            Stub
+            Fake
+        Ensure interactios are correct
+            Spy
+            Mock
+    Monkey Patching
+        Collaborators is difficult to replace
+        Dinamically change code during runtime
+Parameterised Tests & Test Coverage
+    Parameterised Testing
+        Some function or method
+        Different parameters
+        More coverage
+    Measuring Test Coverage
+        $ pip install coverage
+        $ pip install pytest-cov
+        
+        To run with unittest
+            $ python -m coverage run -m unittest
+            $ python -m coverage html
+        To run with pytest
+            $ python -m pytest --cov-report html:cov_html --cov=tennis .
+            $ python -m pytest --cov-report html:cov_html --cov-branch --cov=tennis .
+
+        Use branch coverage
+        100% coverage is no guarantee
